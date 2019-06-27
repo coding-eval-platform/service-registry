@@ -7,6 +7,15 @@ spring:
     main:
         banner-mode: "off"
 
+server:
+    port: 8761
+
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+
+
 ---
 # Configuration for Development Environment
 
@@ -14,6 +23,10 @@ spring:
     profiles:
         - dev
         - development
+
+eureka:
+    server:
+        wait-time-in-ms-when-sync-empty: 5
 
 ---
 # Configuration for Staging Environment
