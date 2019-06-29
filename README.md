@@ -177,7 +177,7 @@ Check [this resource](https://github.com/gcuisinier/jenv#plugins) for more infor
 	$ mvn clean package
 	```
 
-	**Note:** In case you change the ```<project-root>/service-registry-application/src/main/resources/application.yml```, you must build again the project. Otherwise, if you want to change a property on the fly, use command line properties.
+	**Note:** In case you change the ```<project-root>/src/main/resources/application.yml```, you must build again the project. Otherwise, if you want to change a property on the fly, use command line properties.
 
 
 ### Run
@@ -186,7 +186,7 @@ You can run the application using the following command:
 
 ```
 $ export SERVICE_REGISTRY_VERSION=<project-version>
-$ java [-Dkey=value properties] -jar <project-root>/service-registry-application/target/service-registry-application-$SERVICE_REGISTRY_VERSION.jar [--key=value properties]
+$ java [-Dkey=value properties] -jar <project-root>/target/service-registry-$SERVICE_REGISTRY_VERSION.jar [--key=value properties]
 ```
 
 The following is a full example of how to run the application:
@@ -194,7 +194,7 @@ The following is a full example of how to run the application:
 ```
 export SERVICE_REGISTRY_VERSION=<project-version>
 java \
-	-jar <project-root>/service-registry-application/target/service-registry-application-$SERVICE_REGISTRY_VERSION.jar \
+	-jar <project-root>/target/service-registry-$SERVICE_REGISTRY_VERSION.jar \
 	--spring.profiles.active=dev
 ```
 
@@ -202,7 +202,7 @@ java \
 
 ## Use with Docker
 
-This project includes a ```Dockerfile``` in the ```service-registry-application``` module, together with the [Spotify's dockerfile maven plugin](https://github.com/spotify/dockerfile-maven). 
+This project includes a ```Dockerfile``` in the project's root, together with the [Spotify's dockerfile maven plugin](https://github.com/spotify/dockerfile-maven).
 
 
 ### Build the image
