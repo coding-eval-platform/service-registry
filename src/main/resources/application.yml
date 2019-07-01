@@ -1,44 +1,44 @@
 # Default Configuration
 
 spring:
-    profiles:
-        active: dev
+  profiles:
+    active: dev
 
-    main:
-        banner-mode: "off"
+  main:
+    banner-mode: "off"
 
 server:
-    port: 8761
+  port: 8761
 
 eureka:
-    client:
-        register-with-eureka: false
-        fetch-registry: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
 
 
 ---
 # Configuration for Development Environment
 
 spring:
-    profiles:
-        - dev
-        - development
+  profiles:
+    - dev
+    - development
 
 eureka:
-    server:
-        wait-time-in-ms-when-sync-empty: 5
+  server:
+    wait-time-in-ms-when-sync-empty: 5
 
 ---
 # Configuration for Staging Environment
 
 spring:
-    profiles:
-        - staging
+  profiles:
+    - staging
 
 ---
 # Configuration for Production Environment
 
 spring:
-    profiles:
-        - prod
-        - production
+  profiles:
+    - prod
+    - production
